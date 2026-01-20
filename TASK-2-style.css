@@ -1,0 +1,80 @@
+*{
+    margin: 0px ;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    /* option 1 */
+    --background-color:#0F172A;
+    --buttons:#1E293B;
+    --Number-buttons:#CBD5E1;
+    --operators:#38BDF8;
+    --equal:#22C55E;
+    --Text:#FFFFFF;
+}
+body{
+  /* background-color: rgb(77, 77, 180); */
+  /* background-color: #020617; */
+    /* background-color: #0B1220; */
+ background-color: #E5E7EB;
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: initial;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    background-color: whi;
+}
+.calculator{
+    /* border: 2px solid; */
+    padding: 20px 20px;
+    background-color:var(--background-color);
+    box-shadow: 0px 2px 3px 1px grey;
+}
+#input{
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: end;
+    outline: none;
+    font-size: 20px;
+    color: var(--Text);
+    background-color:rgba(58, 58, 58, 0.473);
+    box-shadow: 0px 0px 5px 0px var(--background-color);
+    border: none;
+}
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.nini-box{
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    background-color: var(--buttons);
+    box-shadow: 0px 1px 5px 0px grey;
+}#equal{
+    grid-column: span 2;
+    background-color: var(--equal);
+    font-size: 35px;
+    cursor: pointer;
+}
+.operator ,#clear, #delete{ 
+    color: var(--operators);
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.number{
+    color: var(--Number-buttons);
+    cursor: pointer;
+}
