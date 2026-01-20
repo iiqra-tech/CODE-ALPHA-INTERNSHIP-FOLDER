@@ -1,0 +1,154 @@
+*{
+    padding: 0px ;
+    margin: 0px;
+    box-sizing: border-box;
+}
+  /* image heading */
+h1{
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: green;
+   text-align: center;
+    font-family: Italic;
+    font-weight: 600;
+
+}
+
+/* nav section */
+nav{
+  margin-bottom: 20px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 8vh;
+}
+a{ 
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: italic;
+    background-color: green;
+    transition: 0.3s ease;
+}
+a:hover{
+    transform: scale(1.1);
+    text-decoration: underline;
+    color: rgb(58, 219, 58);
+}
+#menuicon{
+    display: none;
+}
+ /* sub heading */
+#heading{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: green;padding-bottom: 10px;
+    border-bottom: 3px solid green;
+    margin: 0px auto 20px;
+    width: fit-content;
+    font-family: initial;
+}
+
+
+/* Images Section */
+.images{
+    padding: 0px 20px;
+    margin-bottom: 50px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.box{
+    box-shadow: 5px 5px 15px  rgb(214, 212, 212);
+    transition: 0.4s ease;
+}
+.box:hover{
+    transform: scale(1.1);
+}
+img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Media quiery */
+@media (max-width:900px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+@media (max-width:768px){
+  nav{
+  gap: 25px;
+}
+a{ 
+    font-size: 20px;
+}
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width:500px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 30px;
+        align-items: center;
+        height: 10vh;
+    }
+    h1{
+        font-size: 30px;
+        margin-bottom: 0px;
+        color: green;
+    }
+    /* navbar */
+    #menuicon{
+        position: relative;
+        cursor :pointer;
+        display: blocK;
+        font-size: 18px;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: absolute;
+        padding:0px 10px 5px;
+        right: 0px;
+        top: 50px;
+        display: none;
+        height: 90vh;
+        width: 80%;
+        padding-top: 40px;
+    }
+    #nav-links.active{
+    display: flex;
+    }
+    nav a{
+        padding-bottom: 10px;
+        border-bottom: 1px solid white;
+    }
+    /* sub heading */
+    #heading{
+    font-size: 22px;}
+    
+    .container{
+        display: grid;
+        grid-template-columns:1fr;
+        justify-content: center;
+    }
+
+}
